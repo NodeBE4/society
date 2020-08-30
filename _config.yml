@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: 公民
+name: 社会
 
 # Short bio or description (displayed in the header)
-description: 公民记者
+description: 公民记者到处拍
 
 #
 # Flags below are optional
@@ -45,7 +45,7 @@ footer-links:
   email: beauti4@protonmail.com
   facebook:
   flickr:
-  github: NodeBE4/citizen
+  github: NodeBE4/society
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -80,7 +80,7 @@ url: https://nodebe4.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/citizen"
+baseurl: "/society"
 
 #
 # !! You don't need to change any of the configuration flags below !!
