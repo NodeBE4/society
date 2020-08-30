@@ -20,6 +20,7 @@ let feedxUrls = {
   '方斌': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURItarzSwqakT-EZkSvuy3A',
   '李泽华': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUJHUpBCNKrZwBhxfcIrP8Aw',
   '张展': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUsNKkvZGMURFmYkfhYa2HOQ',
+  'serpentza': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUl7mAGnY4jh4Ps8rhhh8XZg',
 }
 
 async function fetchArticles(site) {
