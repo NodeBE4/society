@@ -15,6 +15,7 @@ let feedxUrls = {
   '打工妹四妹': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUp8uWkn-Jf38NxiYGk-tPEQ',
   '渺渺看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UU5cPhHflvY4Kii4caZgFUGw',
   '小叔TV': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUPNfoYdMopKZKlaTB92g-QQ',
+  '十年漂泊 Fly X': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUCB378oYIajik1Zpxq8vm1w',
 }
 
 async function fetchArticles(site) {
