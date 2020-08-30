@@ -5,8 +5,9 @@ let urlMod = require('url')
 let URL = urlMod.URL
 
 let feedxUrls = {
-  '放眼看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UChhALDW7rmXg42FgiwIWdDA',
-  '九哥记': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UCfz12vhnTQkbLyeDAm5LCMA',
+  '放眼看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUhhALDW7rmXg42FgiwIWdDA',
+  '九哥记': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUfz12vhnTQkbLyeDAm5LCMA',
+  '无修饰的中国': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUXQg8FJ_kp2awqhTD4G5djQ',
 }
 
 async function fetchArticles(site) {
