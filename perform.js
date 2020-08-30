@@ -8,6 +8,10 @@ let feedxUrls = {
   '放眼看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUhhALDW7rmXg42FgiwIWdDA',
   '九哥记': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUfz12vhnTQkbLyeDAm5LCMA',
   '无修饰的中国': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUXQg8FJ_kp2awqhTD4G5djQ',
+  'WilliamWorks Tv': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUQMVbZda2oxcCkFqXD3dm6Q',
+  'HEYFLY嘿飛人': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUqgkhQMhWX-NMiNniNjFE5w',
+  '大牛In China': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURT2Bbvrq7BdTnu5qKSFT1Q',
+  'LyLy TV越南生活': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUgUUKN51WMywzlI-cuMzD8w',
 }
 
 async function fetchArticles(site) {
