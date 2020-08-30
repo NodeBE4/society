@@ -18,6 +18,8 @@ let feedxUrls = {
   '十年漂泊 Fly X': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUCB378oYIajik1Zpxq8vm1w',
   '陈秋实': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUv361SF6FKznoGPKEFG9Yhw',
   '方斌': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURItarzSwqakT-EZkSvuy3A',
+  '李泽华': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUJHUpBCNKrZwBhxfcIrP8Aw',
+  '张展': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUsNKkvZGMURFmYkfhYa2HOQ',
 }
 
 async function fetchArticles(site) {
