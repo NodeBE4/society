@@ -12,6 +12,9 @@ let feedxUrls = {
   'HEYFLY嘿飛人': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUqgkhQMhWX-NMiNniNjFE5w',
   '大牛In China': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURT2Bbvrq7BdTnu5qKSFT1Q',
   'LyLy TV越南生活': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUgUUKN51WMywzlI-cuMzD8w',
+  '打工妹四妹': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUp8uWkn-Jf38NxiYGk-tPEQ',
+  '渺渺看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UU5cPhHflvY4Kii4caZgFUGw',
+  '小叔TV': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUPNfoYdMopKZKlaTB92g-QQ',
 }
 
 async function fetchArticles(site) {
