@@ -4,32 +4,19 @@ let querystring = require('querystring')
 let urlMod = require('url')
 let URL = urlMod.URL
 
-let feedxUrls = {
-  '放眼看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUhhALDW7rmXg42FgiwIWdDA',
-  '九哥记': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUfz12vhnTQkbLyeDAm5LCMA',
-  '无修饰的中国': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUXQg8FJ_kp2awqhTD4G5djQ',
-  'WilliamWorks Tv': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUQMVbZda2oxcCkFqXD3dm6Q',
-  'HEYFLY嘿飛人': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUqgkhQMhWX-NMiNniNjFE5w',
-  '大牛In China': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURT2Bbvrq7BdTnu5qKSFT1Q',
-  'LyLy TV越南生活': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUgUUKN51WMywzlI-cuMzD8w',
-  '打工妹四妹': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUp8uWkn-Jf38NxiYGk-tPEQ',
-  '渺渺看世界': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UU5cPhHflvY4Kii4caZgFUGw',
-  '小叔TV': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUPNfoYdMopKZKlaTB92g-QQ',
-  '十年漂泊 Fly X': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUCB378oYIajik1Zpxq8vm1w',
-  '陈秋实': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUv361SF6FKznoGPKEFG9Yhw',
-  '方斌': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UURItarzSwqakT-EZkSvuy3A',
-  '李泽华': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUJHUpBCNKrZwBhxfcIrP8Aw',
-  '张展': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUsNKkvZGMURFmYkfhYa2HOQ',
-  'serpentza': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUl7mAGnY4jh4Ps8rhhh8XZg',
-}
+
+let jsonText = fs.readFileSync('./subs.json');
+let feedxUrls = JSON.parse(jsonText);
+let content = JSON.stringify(feedxUrls, undefined, 4);
+fs.writeFileSync(`./subs.json`, content)
 
 async function fetchArticles(site) {
 
   let articles
-  if (feedxUrls[site]) {
-    articles = await fetchFeedx(site, feedxUrls[site])
-//  } else if (site == '中国数字时代') {
-//    articles = await fetchCDT()
+  if (site['url']) {
+    articles = await fetchFeedx(site['site'], site['url'])
+  } else if (site == '中国数字时代') {
+    articles = await fetchCDT()
   }
 
   articles.sort((x, y) => x.pubDate - y.pubDate)
@@ -114,7 +101,8 @@ async function performCDT() {
 }
 
 async function perform() {
-  let sites = Object.keys(feedxUrls)
+  // let sites = Object.keys(feedxUrls)
+  let sites = feedxUrls
 
   sites.map(site => {
     performSite(site)
@@ -129,8 +117,6 @@ async function performSite(site) {
     let siteFolder = `./_posts`
     fs.mkdirSync(siteFolder, { recursive: true })
 
-    let files = fs.readdirSync(siteFolder)
-
     let articles = await fetchArticles(site)
 
     articles.map(a => {
@@ -139,7 +125,7 @@ async function performSite(site) {
 
     // generateList(site)
   } catch(e) {
-    console.log([site, e])
+    console.log([site['site'], e])
   }
 }
 
