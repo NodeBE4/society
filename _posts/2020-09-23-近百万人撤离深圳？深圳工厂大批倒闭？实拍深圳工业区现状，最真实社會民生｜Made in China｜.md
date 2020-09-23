@@ -1,0 +1,16 @@
+---
+layout: post
+title: "近百万人撤离深圳？深圳工厂大批倒闭？实拍深圳工业区现状，最真实社會民生｜Made in China｜World Factory｜Fabricado en China｜中国製【九哥记】"
+date: 2020-09-23T02:30:01.000Z
+author: 九哥记
+from: https://www.youtube.com/watch?v=Ni0iNvCW-P8
+tags: [ 九哥记 ]
+categories: [ 九哥记 ]
+---
+<!--1600828201000-->
+[近百万人撤离深圳？深圳工厂大批倒闭？实拍深圳工业区现状，最真实社會民生｜Made in China｜World Factory｜Fabricado en China｜中国製【九哥记】](https://www.youtube.com/watch?v=Ni0iNvCW-P8)
+------
+
+<div>
+♥关于九哥♥ 大家好鸭！我是九哥,一枚来自广东90的妹子， 已在广州生活了6年。 我爱广州，喜欢旅游，（会听粤语，但是让我讲粤语你听了绝对后悔的）在这里跟大家分享关于广州的一些新鲜事情，也会分享我的生活琐事。有钱的话，会到其他地方旅游，体验不同的人文风俗，分享一些当地的有趣事情！了解世界不同的角落，跟着我的脚步，我将带你看更真实的世界。感谢大家对我的支持和订阅！#广州#九哥记#穷游#廣州#九哥記#窮遊
+</div>
