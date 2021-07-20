@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>社会 – 公民记者到处拍</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="公民记者到处拍">
+    <meta property="og:description" content="公民记者到处拍" />
+    
+    <meta name="author" content="社会" />
+
+    
+
+  <link rel="stylesheet" type="text/css" href="/society/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="社会 - 公民记者到处拍" href="/society/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/society/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/society/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/society/">社会</a></h1>
+        <i class="site-description" style="font-size: 12px;">公民记者到处拍</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/society/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (4031)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/society/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/society/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fnodebe4.github.io%2Fsociety%2Fpage14%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://nodebe4.github.io/society/page14/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://nodebe4.github.io/society/page14/&text=社会-公民记者到处拍&hashtags=社会" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://nodebe4.github.io/society/page14/&title=社会-公民记者到处拍" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://nodebe4.github.io/society/page14/&title=社会-公民记者到处拍" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=社会-公民记者到处拍&body=" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://nodebe4.github.io/society/page14/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://nodebe4.github.io/society/page14/&title=社会-公民记者到处拍&caption=&tags=社会" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=社会-公民记者到处拍&url=https://nodebe4.github.io/society/page14/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/society/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/society/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+<ul class="archive">
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-24/%E7%96%AB%E8%8B%97%E4%B8%80%E9%92%88%E9%9A%BE%E6%B1%82-%E7%B4%A0%E8%B4%A8%E5%A4%A7%E5%AE%B6%E6%B3%A8%E6%84%8F%E7%B4%A0%E8%B4%A8-%E6%8E%92%E9%98%9F%E5%B0%B1%E9%82%A3%E4%B9%88%E9%9A%BE%E5%90%97-%E7%BD%97%E5%AE%BEVLOG/">
+      
+        疫苗一针难求！素质大家注意素质，排队就那么难吗？【罗宾VLOG】
+      </a>
+      <time>2021-05-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#罗宾" class="tag">
+        罗宾
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=w7xHKGwcsx4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-24/%E9%9B%B2%E5%8D%97%E7%99%BD%E9%B6%B4%E7%81%98%E6%B0%B4%E9%9B%BB%E7%AB%99%E5%8D%B3%E5%B0%87%E8%93%84%E6%B0%B4%E5%88%B0800%E7%B1%B3-%E8%88%87%E5%A4%A7%E7%90%86%E5%9C%B0%E9%9C%87%E7%84%A1%E9%97%9C-%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%80%E5%A4%A7%E7%99%BC%E9%9B%BB%E6%B0%B4%E5%A3%A9%E5%8D%B3%E5%B0%87%E8%90%BD%E6%88%90%E4%BD%BF%E7%94%A8-%E5%8D%B3%E5%B0%87%E6%B7%B9%E6%B2%92%E6%95%B8%E7%99%BE%E6%A2%9D/">
+      
+        雲南白鶴灘水電站即將蓄水到800米，與大理地震無關？|世界第一大發電水壩即將落成使用|即將淹沒數百條村莊，共10萬人遷移|#水電站#最大發電站#三峽#CC subtitles added
+      </a>
+      <time>2021-05-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=9N5NlCS4Mv4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E5%A4%AA%E5%B7%A7%E5%90%88%E4%BA%86-25%E5%B9%B4%E5%BE%8C%E7%9A%84%E5%90%8C%E4%B8%80%E5%A4%A9%E5%8F%88%E5%A8%B6%E6%96%B0%E5%AA%B3%E5%A9%A6-%E5%A4%A7%E5%AE%B4%E8%B3%93%E5%AE%A2%E4%B8%8D%E6%94%B6%E7%A6%AE%E9%87%91-%E7%9C%9F%E5%A4%A7%E6%B0%A3/">
+      
+        太巧合了，25年後的同一天又娶新媳婦，大宴賓客不收禮金，真大氣
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=n2XdmWr49lo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E8%A6%AA%E6%83%85%E8%AE%8A%E5%BE%97%E8%B6%8A%E4%BE%86%E8%B6%8A%E5%90%91%E9%8C%A2%E7%9C%8B-%E5%9B%9E%E5%A8%98%E5%AE%B6%E5%9C%98%E8%81%9A%E8%AE%8A%E6%8F%90%E6%AC%BE%E6%A9%9F-%E6%8B%86%E9%81%B7%E6%AC%BE%E5%88%B0%E8%B3%AC-%E8%A6%AA%E6%88%9A%E7%AB%8B%E5%8D%B3%E4%B8%8A%E9%96%80%E5%80%9F%E9%8C%A2-%E4%B8%80%E5%AE%B6%E5%85%AD%E5%8F%A3%E5%8F%AA%E6%9C%89%E4%B8%80%E5%80%8B%E4%BA%BA%E5%B9%B9%E6%B4%BB%E5%A3%93%E5%8A%9B%E5%B1%B1/">
+      
+        親情變得越來越向錢看，回娘家團聚變提款機|拆遷款到賬，親戚立即上門借錢|一家六口只有一個人幹活壓力山大|#親情#關係#借錢#現代的親情#人情冷暖|#人情味#跑路#夫妻關係#相親
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=kytFnx2kUHQ" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E5%BA%95%E5%B1%A4%E5%AF%A6%E6%8B%8D-%E5%8B%A4%E5%8B%9E%E7%9A%84%E8%BE%B2%E6%B0%91%E5%B7%A5%E8%BA%BA%E5%9C%A8%E5%9C%B0%E4%B8%8A%E7%9D%A1%E5%8D%88%E8%A6%BA-%E5%9C%8B%E9%9A%9B%E5%95%86%E8%B2%BF%E5%9F%8E%E7%A9%BA%E7%A9%BA%E8%95%A9%E8%95%A9/">
+      
+        底層實拍：勤勞的農民工躺在地上睡午覺。國際商貿城空空蕩蕩
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=jTMxNgRLwg0" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E4%B8%8A%E6%B5%B7%E6%9C%88%E8%96%AA%E4%B8%8A%E8%90%AC%E7%9A%84%E6%82%B2%E5%93%80%E7%8F%BE%E7%8B%80-%E5%8B%9E%E5%BF%83%E5%8B%9E%E5%8A%9B%E5%A4%9A%E5%B9%B4%E5%BE%8C-%E5%BF%99%E7%9A%84%E4%B8%80%E8%BA%AB%E7%AA%AE%E8%88%87%E7%97%85-%E5%A6%82%E4%BB%8A%E7%9C%8B%E7%A0%B4%E5%A4%A2%E5%B7%B2%E9%86%92-%E4%BA%BA%E7%94%9F%E6%AD%B8%E5%AE%BF%E6%98%AF%E8%BA%BA%E5%B9%B3/">
+      
+        上海月薪上萬的悲哀現狀，勞心勞力多年後，忙的一身窮與病。🙏👣☔如今看破夢已醒，人生歸宿是躺平！#躺躺更健康#上海打工人#上海房租#
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=XUueR4RvUtk" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E6%84%81%E6%AD%BB%E4%BA%BA-%E7%94%A2%E6%9C%9F%E9%A6%AC%E4%B8%8A%E5%B0%B1%E5%88%B0%E4%BA%86%E5%8F%AF%E6%98%AF%E9%8C%A2%E9%82%84%E6%B2%92%E6%9C%89%E6%BA%96%E5%82%99%E5%A5%BD-%E7%9B%B8%E6%AF%94%E4%B9%8B%E4%B8%8B%E4%BD%A0%E5%BE%88%E5%B9%B8%E7%A6%8F%E5%90%A7/">
+      
+        愁死人，產期馬上就到了可是錢還沒有準備好，相比之下你很幸福吧
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=frzrUstotl8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E8%80%81%E5%85%AC%E5%8E%BB%E4%B8%96%E5%90%8E-40%E5%B2%81%E7%9A%84%E5%8D%95%E4%BA%B2%E5%A6%88%E5%A6%88%E8%87%AA%E5%B7%B1%E5%85%BB3%E4%B8%AA%E5%AD%A9%E5%AD%90%E4%B8%8A%E5%AD%A6-%E5%A5%B9%E4%B8%8D%E7%9F%A5%E9%81%93%E5%BA%95%E8%83%BD%E5%9D%9A%E6%8C%81%E5%88%B0%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99/">
+      
+        老公去世后，40岁的单亲妈妈自己养3个孩子上学，她不知道底能坚持到什么时候！
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#LyLy TV越南生活" class="tag">
+        LyLy TV越南生活
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=92ig7B0Kuf0" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-23/%E8%B6%85%E7%B4%9A%E9%9B%9C%E4%BA%A4%E6%B0%B4%E7%A8%BB-%E4%B9%8B%E7%88%B6%E9%80%9D%E4%B8%96%E8%B7%AF%E4%B8%8A%E5%8D%81%E8%90%AC%E4%BA%BA%E9%80%81%E8%A1%8C-%E5%A0%AA%E6%AF%94%E7%95%B6%E5%B9%B4%E7%B8%BD%E7%90%86-%E8%B6%85%E7%B4%9A%E7%A8%BB%E6%8E%A8%E5%BB%A3%E9%9D%A2%E7%A9%8D%E7%B8%AE%E5%B0%8F%E5%88%B08.5-%E8%A2%81%E9%9A%86%E5%B9%B3%E4%BB%99%E9%81%8A-%E9%80%81%E8%A1%8C/">
+      
+        “超級雜交水稻”之父逝世路上十萬人送行，堪比當年總理|超級稻推廣面積縮小到8.5%|袁隆平仙遊，送行場面震撼|糧食秘密武器|#袁隆平#共和國勛章#糧食#水稻#CC subtitles added
+      </a>
+      <time>2021-05-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=mSewCD0MZQU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/%E7%89%9B%E6%B0%A3%E6%B2%96%E5%A4%A9%E7%9A%84%E7%94%B7%E4%BA%BA%E7%9C%9F%E7%A5%9E%E5%A5%87-25%E5%B9%B4%E5%BE%8C%E5%8F%88%E4%B8%80%E6%AC%A1%E5%A5%89%E5%AD%90%E6%88%90%E5%A9%9A-%E4%B8%A6%E4%B8%94%E9%82%84%E6%98%AF%E5%90%8C%E4%B8%80%E5%A4%A9/">
+      
+        牛氣沖天的男人真神奇，25年後又一次奉子成婚，並且還是同一天
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=nCswHtx-7fo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/%E5%AF%A6%E6%8B%8D%E9%AB%98%E9%90%B5%E7%AB%99%E6%97%81%E9%82%8A%E7%9A%84%E9%AB%98%E5%B1%A4%E7%88%9B%E5%B0%BE%E6%A8%93-%E9%9D%9E%E5%B8%B8%E7%A4%99%E7%9C%BC-%E8%8D%92%E5%BB%A2%E7%9A%84%E5%9C%9F%E5%9C%B0%E6%8B%BF%E4%BE%86%E7%A8%AE%E8%8D%89%E4%BA%86/">
+      
+        實拍高鐵站旁邊的高層爛尾樓，非常礙眼。荒廢的土地拿來種草了
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=HJ6q8xw3Cas" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/5%E6%9C%8822%E6%97%A5%E6%B9%98%E6%B1%9F%E6%B0%B4%E4%BD%8D%E8%B6%85%E8%AD%A6%E6%88%92%E7%B7%9A-%E9%81%8A%E5%AE%A2%E6%B0%B4%E4%B8%AD%E5%8F%83%E8%A7%80%E6%99%AF%E5%8D%80-%E4%B8%80%E5%A4%A7%E6%97%A9%E6%B0%B4%E6%B7%B9%E8%BB%8A%E6%BB%BF%E8%A1%97%E9%83%BD%E6%98%AF-%E4%BB%8A%E5%B9%B4%E6%B9%98%E6%B1%9F%E6%9C%80%E5%A4%A7%E6%B4%AA%E5%B3%B0%E9%A0%86%E5%88%A9%E9%81%8E%E5%A2%83%E8%A1%A1%E9%99%BD/">
+      
+        5月22日湘江水位超警戒線，遊客水中參觀景區|一大早水淹車滿街都是|今年湘江最大洪峰順利過境衡陽|#2021水災#2021洪峰#最新洪峰#湖南湘江
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=m0MXhgkoiDo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/Guns,-China-and-Adventure!/">
+      
+        Guns, China and Adventure!
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#serpentza" class="tag">
+        serpentza
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=lSwbekHmBMM" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/%E4%B8%8A%E6%B5%B7%E6%9C%80%E5%86%B7%E6%B8%85%E5%95%86%E5%A0%B4%E5%AF%A6%E6%8B%8D-%E5%A4%A7%E9%87%8F%E6%89%93%E5%B7%A5%E8%80%85%E8%BF%94%E9%84%89-%E5%BA%97%E9%8B%AA%E7%84%A1%E4%BA%BA%E7%A7%9F%E5%95%86%E6%88%B6%E7%84%A1%E4%BA%BA-%E6%88%BF%E7%A7%9F%E9%AB%98-%E4%BA%BA%E5%B7%A5%E9%AB%98-%E4%B8%8D%E5%80%92%E9%96%89%E9%83%BD%E5%BE%88%E9%9B%A3/">
+      
+        上海最冷清商場實拍，大量打工者返鄉，店鋪無人租商戶無人。房租高，人工高，不倒閉都很難！
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=zZz0AR-6dZo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/%E9%9B%96%E8%AA%AA%E6%84%9B%E9%9B%B2%E6%98%AF%E6%AE%98%E7%96%BE%E4%BA%BA%E4%BD%86%E5%BE%88%E6%87%82%E5%BE%97%E6%84%9F%E6%81%A9-%E7%9C%8B%E9%81%8E%E7%9A%84%E7%94%B7%E4%BA%BA%E5%8C%85%E4%BD%A0%E4%B8%8D%E6%9C%83%E5%86%8D%E5%AB%8C%E6%A3%84%E8%80%81%E5%A9%86%E4%BA%86/">
+      
+        雖說愛雲是殘疾人但很懂得感恩，看過的男人包你不會再嫌棄老婆了
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=wWQ5uFfXhBg" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/%E5%9B%BD%E5%86%85%E6%9C%89%E4%BA%9B%E4%BA%BA-%E6%9C%89%E7%82%B9%E6%9D%83%E5%B0%B1%E8%BF%99%E6%A0%B7%E5%81%9A-%E7%9C%9F%E8%AE%A9%E6%88%91%E6%81%B6%E5%BF%83-%E4%BD%86%E6%88%91%E4%BB%AC%E9%80%89%E6%8B%A9%E6%B2%89%E9%BB%98-%E7%BD%97%E5%AE%BEVLOG/">
+      
+        国内有些人，有点权就这样做，真让我恶心，但我们选择沉默【罗宾VLOG】
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#罗宾" class="tag">
+        罗宾
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=7l2KSe94P-M" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-22/2021%E6%B1%9F%E8%A5%BF%E7%AC%AC%E4%B8%80%E8%99%9F%E6%B4%AA%E5%B3%B0%E9%81%8E%E5%A2%83-%E6%AF%94%E5%8E%BB%E5%B9%B4%E6%97%A92%E5%80%8B%E6%9C%88%E4%B8%94%E5%A2%9E%E9%87%8F20-%E6%B1%9F%E8%A5%BF%E8%B4%9B%E6%B1%9F%E6%BC%B2%E6%B0%B4%E5%B0%87%E8%87%B3%E8%AD%A6%E6%88%92%E7%B7%9A-%E6%9D%91%E6%B0%91%E5%8F%88%E6%BA%96%E5%82%99%E6%92%A4%E9%9B%A2-%E5%8D%97%E6%98%8C/">
+      
+        2021江西第一號洪峰過境，比去年早2個月且增量20%|江西贛江漲水將至警戒線，村民又準備撤離|南昌贛江水漫河堤只需3小時|#2021水災#2021洪峰#最新洪峰#南昌赣江
+      </a>
+      <time>2021-05-22</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=dqjroluD79U" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E6%98%AF%E6%95%85%E6%84%8F%E5%AE%89%E6%8E%92%E9%82%84%E6%98%AF%E5%B7%A7%E5%90%88-25%E5%B9%B4%E5%BE%8C%E5%86%8D%E6%AC%A1%E5%A5%89%E5%AD%90%E6%88%90%E5%A9%9A-%E4%B8%8D%E5%90%8C%E7%9A%84%E6%98%AF%E9%80%99%E4%B8%80%E5%9B%9E%E6%98%AF%E7%94%B7%E5%AD%A9/">
+      
+        是故意安排還是巧合，25年後再次奉子成婚，不同的是這一回是男孩
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=5uT9nZcAgqE" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E4%BA%91%E5%8D%976.4%E7%BA%A7%E5%9C%B0%E9%9C%87-%E9%9D%92%E6%B5%B77.4%E7%BA%A7%E5%9C%B0%E9%9C%87-%E4%B8%80%E5%A4%9C%E5%A4%9A%E8%BE%BE%E5%87%A0%E5%8D%81%E6%AC%A1%E4%BD%99%E9%9C%87-%E7%9B%AE%E5%89%8D3%E6%AD%BB%E5%A4%9A%E4%BA%BA%E5%8F%97%E4%BC%A4-%E9%9C%87%E5%90%8E%E9%A2%91%E7%B9%81%E5%87%BA%E7%8E%B0%E5%9C%B0%E9%9C%87%E5%85%89,%E4%BD%99%E9%9C%87/">
+      
+        ❌云南6.4级地震！青海7.4级地震！一夜多达几十次余震！目前3死多人受伤！震后频繁出现地震光,余震波及甘肃敦煌山西西安！愿平安！🙏🙏🙏
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 真實中國頻道Real China TV</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#真實中國頻道" class="tag">
+        真實中國頻道
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=WwRzfUzOLNw" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E7%B9%BC%E8%B3%BD%E6%A0%BC%E5%90%8E%E9%9B%B2%E5%8D%97%E5%A4%A7%E7%90%86%E7%AA%81%E7%99%BC6%E7%B4%9A%E5%9C%B0%E9%9C%87-%E5%A4%A7%E6%89%B9%E6%B0%91%E7%9C%BE%E5%9C%A8%E9%A6%AC%E8%B7%AF%E4%B8%8A%E7%9D%A1%E8%A6%BA%E5%BE%B9%E5%A4%9C%E7%84%A1%E7%9C%A0-%E5%A4%A7%E7%90%86%E6%BC%BE%E6%BF%9E%E5%9C%B0%E9%9C%87%E6%89%80%E6%9C%89%E7%9A%84%E5%B1%85%E6%B0%91%E9%83%BD%E8%B7%91%E5%88%B0%E5%85%AC%E5%9C%92%E8%A3%A1%E9%9D%A2%E7%9D%A1%E8%A6%BA/">
+      
+        繼賽格后雲南大理突發6級地震，大批民眾在馬路上睡覺徹夜無眠|大理漾濞地震所有的居民都跑到公園裡面睡覺|現場猶如荷里活大片|防災設施缺乏|#大理#漾濞6級地震#在大街上睡覺#5月22日
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=66_o_dbgUAc" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E9%86%AB%E9%99%A2%E7%9C%8B%E7%97%85%E5%A4%AA%E8%B2%B4-%E7%A7%81%E4%BA%BA%E5%B0%8F%E8%A8%BA%E6%89%80%E6%93%A0%E6%BB%BF%E7%97%85%E4%BA%BA-%E5%AD%B8%E6%A0%A1%E9%96%80%E5%8F%A3%E5%BE%88%E5%A4%9A%E5%AD%B8%E7%94%9F-%E6%9C%9D%E6%B0%A3%E8%93%AC%E5%8B%83/">
+      
+        醫院看病太貴，私人小診所擠滿病人。學校門口很多學生，朝氣蓬勃
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=H0M-vHmAeyU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E6%B1%9F%E8%98%87%E4%B8%8A%E6%B5%B7%E6%B5%99%E6%B1%9F%E5%BA%95%E5%B1%A4%E6%89%93%E5%B7%A5%E4%BA%BA%E7%8F%BE%E7%8B%80-%E5%B7%A5%E5%BB%A0%E6%8B%9B%E4%B8%8D%E5%88%B0%E4%BA%BA-%E6%89%93%E5%B7%A5%E4%BA%BA%E7%B9%9E%E4%B8%8D%E9%81%8E%E7%9A%84%E5%8B%9E%E5%8B%99%E6%B4%BE%E9%81%A3-%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%9D%91-%E7%82%BA%E4%BB%80%E9%BA%BC%E5%B7%A5%E5%BB%A0%E6%8B%9B%E5%B7%A5%E9%9B%A3/">
+      
+        江蘇上海浙江底層打工人現狀，工廠招不到人，打工人繞不過的勞務派遣。到底有多坑？為什麼工廠招工難？
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=7r68WSYuS3c" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E7%B4%A7%E6%80%A5-%E9%9B%B2%E5%8D%97%E5%A4%A7%E7%90%86%E5%B7%9E%E6%BC%BE%E6%BF%9E%E7%B8%A3%E7%99%BC%E7%94%9F6.4%E7%B4%9A%E5%9C%B0%E9%9C%87-%E5%A4%9A%E5%9C%B0%E9%9C%87%E6%84%9F%E4%B8%8D%E6%96%B7-%E8%A1%97%E9%81%93%E4%BC%97%E5%A4%9A%E7%BE%A4%E4%BC%97%E8%81%8A%E5%A4%A9-%E7%A5%88%E7%A5%B7%E6%89%80%E6%9C%89%E4%BA%BA%E5%AE%89%E5%A5%BD/">
+      
+        紧急：雲南大理州漾濞縣發生6.4級地震，💥🌟🌪多地震感不斷。街道众多群众聊天。祈祷所有人安好！
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=WsRmE_X6Lqo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/21%E8%99%9F%E6%B7%B1%E5%9C%B3%E8%B3%BD%E6%A0%BC%E5%85%A8%E9%9D%A2%E5%B0%81%E9%96%89%E7%B6%AD%E8%AD%B7-%E5%85%B1%E6%8C%AF%E7%A5%9E%E8%A9%B1%E4%B8%8D%E6%94%BB%E8%87%AA%E7%A0%B4-%E5%95%86%E5%AE%B6%E6%90%B6%E5%9C%A8%E5%B0%81%E9%96%89%E5%89%8D%E5%A4%A7%E6%92%A4%E9%80%80-%E6%91%A9%E5%A4%A9%E5%A4%A7%E6%A8%93%E5%85%B1%E6%8C%AF%E5%B7%B2%E4%B8%8A%E7%99%AE3%E5%A4%A9-%E5%93%A1%E5%B7%A5%E5%BF%83%E6%85%8C/">
+      
+        21號深圳賽格全面封閉維護，共振神話不攻自破|商家搶在封閉前大撤退，摩天大樓共振已上癮3天|員工心慌慌要辭職保命|基建狂魔將成拆樓狂魔|#深圳賽格跟蹤#深圳賽格#爆料#深圳賽格廣場#豆腐渣
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=RKQgvm5lybw" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E5%B0%8F%E7%B8%A3%E5%9F%8E%E6%9C%80%E7%B9%81%E8%8F%AF%E7%9A%84%E4%B8%80%E6%A2%9D%E5%95%86%E6%A5%AD%E8%A1%97-%E6%88%BF%E7%A7%9F30%E8%90%AC%E9%99%8D%E5%88%B010%E8%90%AC%E4%BB%8D%E7%84%B6%E7%84%A1%E4%BA%BA%E5%95%8F%E6%B4%A5-%E5%AF%A6%E9%AB%94%E7%B6%93%E6%BF%9F%E9%9B%A3%E5%90%B6/">
+      
+        小縣城最繁華的一條商業街，房租30萬降到10萬仍然無人問津，實體經濟難吶
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#圍城記" class="tag">
+        圍城記
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=9vw4zjiiWUE" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E5%A4%A7%E5%B1%B1%E8%A3%A1%E7%9A%84%E5%A5%BD%E5%BF%83%E7%94%B7%E4%BA%BA-%E9%9D%A2%E5%B0%8D%E6%9C%89%E4%BA%9B%E6%99%BA%E9%9A%9C%E7%9A%84%E5%AA%B3%E5%A9%A6%E4%B8%8D%E6%89%93%E4%B8%8D%E7%BD%B5-%E6%89%BF%E6%93%94%E6%89%80%E6%9C%89%E7%9A%84%E5%AE%B6%E5%8B%99/">
+      
+        大山裡的好心男人，面對有些智障的媳婦不打不罵，承擔所有的家務
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=IC8wCoUg4W4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E6%B7%B1%E5%9C%B3%E8%8F%AF%E5%BC%B7%E5%8C%97%E8%B3%BD%E6%A0%BC%E5%BB%A3%E5%A0%B4%E7%8F%BE%E6%B3%81-%E6%90%96%E6%99%83%E7%9A%84%E5%A4%A7%E6%A8%93%E5%B9%BE%E5%A4%A9%E5%BE%8C%E8%BF%91%E6%B3%81-%E5%95%86%E6%88%B6%E6%92%A4%E9%9B%A2%E6%B8%9B%E5%B0%91%E6%90%8D%E5%A4%B1-%E5%A4%A7%E5%BB%88%E9%80%B2%E5%87%BA%E9%83%BD%E8%A6%81%E6%AA%A2%E6%9F%A5-%E5%B8%8C%E6%9C%9B%E4%B8%80/">
+      
+        深圳華強北賽格廣場現況，搖晃的大樓幾天後近況，👔🤖😅商戶撤離減少損失。大廈進出都要檢查！希望一切安好！
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=xzTMGgy6gp8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-21/%E5%A4%A7%E9%99%86%E6%B1%BD%E8%BD%A6%E5%B9%B4%E5%AE%A1%E6%B5%81%E7%A8%8B-%E6%B1%89%E5%85%B0%E8%BE%BE6%E5%B9%B4%E4%BA%86%E8%A6%81%E4%B8%8A%E7%BA%BF%E9%AA%8C%E8%BD%A6-%E6%88%91%E6%98%AF%E6%80%8E%E4%B9%88%E8%BE%9B%E8%BE%9B%E8%8B%A6%E8%8B%A6%E8%B5%9A%E7%9A%84-%E7%BD%97%E5%AE%BEVLOG/">
+      
+        大陆汽车年审流程，汉兰达6年了要上线验车，我是怎么辛辛苦苦赚的【罗宾VLOG】
+      </a>
+      <time>2021-05-21</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#罗宾" class="tag">
+        罗宾
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=HaLOBUqDX9Y" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E5%B9%B3%E6%99%82%E7%84%A1%E4%BA%BA%E5%B1%85%E4%BD%8F%E7%9A%84%E5%B0%8F%E5%B1%B1%E6%9D%91%E7%AA%81%E7%84%B6%E7%86%B1%E9%AC%A7%E8%B5%B7%E4%BE%86%E4%BA%86-%E4%B8%89%E9%87%8C%E4%BA%94%E6%9D%91%E7%9A%84%E8%80%81%E7%99%BE%E5%A7%93%E8%87%AA%E5%A8%9B%E8%87%AA%E6%A8%82/">
+      
+        平時無人居住的小山村突然熱鬧起來了，三里五村的老百姓自娛自樂
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=mgkkl3Efaik" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E9%90%B5%E7%A4%A6%E7%9F%B3%E7%B7%8A%E7%BC%BA-%E9%8B%BC%E6%9D%90%E5%8D%8A%E5%B9%B4%E6%BC%B2%E4%BA%86%E4%B8%80%E5%80%8D-%E5%95%86%E5%AE%B6%E5%9B%A4%E8%B2%A8%E4%B8%8D%E8%B3%A3-%E5%BB%BA%E6%88%BF%E6%88%90%E9%9B%A3%E9%A1%8C-%E5%BB%BA%E7%AF%89%E6%9D%90%E6%96%99%E4%B8%80%E5%A4%A9%E4%B8%80%E5%80%8B%E5%83%B9%E5%BD%B1%E9%9F%BF%E5%B7%A5%E5%9C%B0%E5%81%9C%E5%B7%A5-%E8%A3%BD%E9%80%A0%E6%A5%AD%E5%8F%88%E4%B8%80%E6%B3%A2/">
+      
+        鐵礦石緊缺，鋼材半年漲了一倍|商家囤貨不賣，建房成難題|建築材料一天一個價影響工地停工|製造業又一波倒閉|#鋼材漲價#鐵礦石緊缺##壓力爆煲#百物騰貴
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=ZhcU22VkBRo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E6%B2%83%E7%88%BE%E7%91%AA%E5%9C%A8%E4%B8%AD%E5%9C%8B%E9%96%8B%E5%95%9F%E9%97%9C%E5%BA%97%E6%BD%AE-%E7%95%99%E4%B8%8B%E7%9A%84%E5%B9%BE%E5%AE%B6%E5%BA%97%E7%94%9F%E6%84%8F%E6%80%8E%E9%BA%BC%E6%A8%A3-%E9%80%9B%E9%80%9B%E8%98%87%E5%B7%9E%E6%B2%83%E7%88%BE%E7%91%AA%E5%AF%A6%E9%AB%94%E5%BA%97/">
+      
+        沃爾瑪在中國開啟關店潮，留下的幾家店生意怎麼樣？逛逛蘇州沃爾瑪實體店
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#圍城記" class="tag">
+        圍城記
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=aOhC5ky_fQU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E7%A4%BE%E6%9C%83%E8%A6%8B%E8%81%9E%E9%8C%84-%E6%B2%B3%E5%8D%97%E5%A4%A7%E5%93%A5-%E6%8B%BF%E7%9D%80%E7%A3%9A%E9%A0%AD%E6%95%B2%E9%81%8E%E8%B7%AF%E5%8F%B8%E6%A9%9F%E7%9A%84%E9%8C%A2-%E5%8F%AA%E7%82%BA%E5%A1%AB%E9%A3%BD%E8%82%9A%E5%AD%90/">
+      
+        社會見聞錄：”河南大哥“拿着磚頭敲過路司機的錢，只為填飽肚子
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=RPZkVYwlrgE" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/Pretty-girls-working-for-the-CCP-are-going-after-u/">
+      
+        Pretty girls working for the CCP are going after us! Find out why!
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#serpentza" class="tag">
+        serpentza
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=PD_x1Cl6_2Q" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E8%B6%85%E5%A4%A7%E5%86%B0%E9%9B%B9%E5%B8%B6%E8%A6%86%E8%93%8B%E5%A4%A7%E5%8D%8A%E5%80%8B%E6%B2%B3%E5%8D%97-520%E6%81%B0%E9%80%A2%E7%99%BE%E5%B9%B4%E4%B8%80%E9%81%87%E6%9A%B4%E9%A2%A8%E5%8A%A0%E5%86%B0%E9%9B%B9-%E6%B7%B1%E5%9C%B3%E8%B3%BD%E6%A0%BC%E5%B7%B2%E7%B6%93%E7%A6%81%E6%AD%A2%E8%88%AA%E6%8B%8D-%E5%B7%B2%E6%9C%89%E4%BA%BA%E5%9B%A0%E6%AD%A4%E4%BC%8F%E6%B3%95-%E8%B3%BD%E6%A0%BC%E5%BB%A3/">
+      
+        超大冰雹帶覆蓋大半個河南，520恰逢百年一遇暴風加冰雹|深圳賽格已經禁止航拍，已有人因此伏法|賽格廣場租戶把貨物全部清空|#爆料#深圳賽格廣場#豆腐渣#五月飛霜#突發天氣
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=Vxk62cF19RA" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E5%BB%A3%E6%9D%B1%E6%B8%85%E9%81%A0%E5%85%A8%E5%9F%8E%E8%A2%AB%E5%B1%B1%E6%B4%AA%E8%A1%9D%E5%9E%AE-%E8%A1%97%E9%81%93%E8%AE%8A%E6%B2%B3%E9%81%93-%E8%A1%8C%E4%BA%BA%E8%BD%AC%E7%9C%BC%E8%A2%AB%E8%A1%9D%E8%B5%B0-%E6%88%BF%E5%B1%8B%E5%9E%AE%E5%A1%8C%E6%90%8D%E5%A4%B1%E5%B7%A8%E5%A4%A7-%E5%9C%B0%E5%BA%AB%E5%85%A8%E9%83%A8%E8%A2%AB%E6%B7%B9-%E6%88%90%E5%8D%83%E4%B8%8A%E8%90%AC%E8%BD%A6%E8%BE%86%E8%A2%AB%E6%B3%A1/">
+      
+        廣東清遠全城被山洪衝垮！街道變河道，行人转眼被衝走，房屋垮塌損失巨大！地庫全部被淹，成千上萬车辆被泡！暴雨持续不断，百年一遇！然而粤东地区大旱，许久没有降雨！为何有如此怪异天气？
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 真實中國頻道Real China TV</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#真實中國頻道" class="tag">
+        真實中國頻道
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=gwlfj11mslY" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E9%A0%BB%E7%B9%81%E7%9A%84%E6%94%AA%E5%8B%95%E5%A5%BD%E5%97%8E-%E7%9B%AE%E5%89%8D%E5%8F%AA%E6%9C%89%E8%BE%B2%E6%9D%91%E5%A9%9A%E7%A6%AE%E4%B8%8A%E6%89%8D%E8%83%BD%E7%9C%8B%E5%88%B0%E7%9A%84%E5%82%B3%E7%B5%B1%E7%87%9C%E5%A4%A7%E7%B1%B3%E6%89%8B%E8%97%9D/">
+      
+        頻繁的攪動好嗎？目前只有農村婚禮上才能看到的傳統燜大米手藝
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=XG-8JmP4f0Q" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E6%B7%B1%E5%9C%B3%E8%B3%BD%E6%A0%BC%E5%A4%A7%E5%BB%88%E9%80%A3%E7%BA%8C%E4%B8%89%E5%A4%A9%E6%90%96%E6%99%83-%E6%B7%B1%E5%9C%B3%E8%8F%AF%E5%BC%B7%E5%8C%97%E7%9A%84%E8%B3%BD%E6%A0%BC%E5%A4%A7%E5%BB%88%E9%80%A3%E7%BA%8C%E4%B8%89%E5%A4%A9%E7%99%BC%E7%94%9F%E6%99%83%E5%8B%95-%E5%B0%8F%E5%A4%A5%E5%8F%AA%E8%83%BD%E5%BF%8D%E7%97%9B%E8%BE%AD%E8%81%B7-%E5%B8%8C%E6%9C%9B%E5%A4%A7/">
+      
+        深圳賽格大廈連續三天搖晃，👹💥🙏深圳華強北的賽格大廈連續三天發生晃動，小夥只能忍痛辭職！希望大家遇到緊急情況，應當盡快撤離到安全位置，一定要注意安全小命重要！
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=syrnMHmn7EU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/5.20%E7%BB%99%E8%80%81%E5%A9%86%E4%B9%B0%E7%9A%84%E7%A4%BC%E7%89%A9%E5%BC%80%E7%AE%B1-%E7%9B%B4%E7%94%B7%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E5%AE%9E%E5%9C%A8-%E7%BD%97%E5%AE%BEVLOG/">
+      
+        5.20给老婆买的礼物开箱，直男就是这么实在【罗宾VLOG】
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#罗宾" class="tag">
+        罗宾
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=5YqoKjvIfKg" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-20/%E8%B6%85%E9%81%A0%E8%B7%9D%E9%9B%A2%E8%A7%80%E6%9C%9B%E6%9C%9D%E9%AE%AE%E7%9C%81%E6%9C%83%E5%9F%8E%E5%B8%82-%E7%B8%BD%E9%AB%94%E9%80%97%E7%95%99%E5%9C%A870%E5%B9%B4%E4%BB%A3-%E6%9C%9D%E9%AE%AE%E5%9C%A8%E8%A8%88%E5%8A%83%E7%B6%93%E6%BF%9F%E4%B8%8B%E7%9A%84%E5%84%AA%E8%B6%8A%E6%80%A7-%E6%9C%9D%E9%AE%AE%E5%A5%B3%E4%BA%BA%E5%8E%BB%E6%B5%B7%E6%A3%A0%E9%85%92%E5%BA%97%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%A2%9D%E4%BB%B6/">
+      
+        超遠距離觀望朝鮮省會城市，總體逗留在70年代|朝鮮在計劃經濟下的優越性|朝鮮女人去海棠酒店工作的條件|潛行觀察|無修飾的朝鮮|#計劃經濟##神秘的朝鮮#朝鮮趕集#朝鮮美女#CC#North Korea
+      </a>
+      <time>2021-05-20</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=kywFAgtGviI" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-19/%E7%B2%BE%E8%8B%B1%E6%97%A9%E9%80%9D-%E5%89%8D%E4%BE%86%E6%83%B3%E9%80%81%E7%9A%84%E8%A6%AA%E6%9C%8B%E7%B5%A1%E7%B9%B9%E4%B8%8D%E7%B5%95-%E7%84%A6%E4%BD%9C%E7%99%BD%E8%8E%8A%E9%80%99%E4%B8%80%E5%A4%A9%E5%A0%B4%E9%9D%A2%E5%AE%8F%E5%A4%A7%E7%86%B1%E9%AC%A7/">
+      
+        精英早逝，前來想送的親朋絡繹不絕，焦作白莊這一天場面宏大熱鬧
+      </a>
+      <time>2021-05-19</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=xu9nibK2jvs" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-19/%E8%B3%BD%E6%A0%BC%E5%BB%A3%E5%A0%B4%E8%A2%AB%E7%88%8699%E5%B9%B4%E5%B7%B2%E7%B6%93%E5%87%BA%E7%8F%BE%E5%95%8F%E9%A1%8C%E4%B8%A6%E4%B8%94%E9%82%8A%E5%BB%BA%E9%82%8A%E6%94%B9%E6%96%B9%E6%A1%88-%E8%B3%BD%E6%A0%BC%E5%BB%A3%E5%A0%B4%E7%A7%9F%E6%88%B6%E9%99%B8%E7%BA%8C%E6%90%AC%E9%9B%A2%E6%92%A4%E5%A0%B4%E6%B8%9B%E5%B0%91%E6%90%8D%E5%A4%B1-%E8%B3%BD%E6%A0%BC%E5%BB%A3%E5%A0%B4%E7%A7%9F%E6%88%B6%E6%8A%8A%E8%B2%A8%E7%89%A9/">
+      
+        賽格廣場被爆99年已經出現問題並且邊建邊改方案|賽格廣場租戶陸續搬離撤場減少損失|賽格廣場租戶把貨物全部清空|搖晃的大樓|#爆料#深圳賽格廣場#豆腐渣
+      </a>
+      <time>2021-05-19</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=gUhwkUwcEMg" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-19/%E8%90%AC%E5%84%84%E6%81%86%E5%A4%A7%E5%9C%B0%E7%94%A2%E7%9A%84%E5%88%A5%E5%A2%85%E7%BE%A4%E9%9B%9C%E8%8D%89%E5%8F%A2%E7%94%9F-%E5%9C%B0%E6%9D%BF%E9%83%BD%E7%99%BC%E9%9C%89%E4%BA%86-%E6%A4%8D%E7%89%A9%E5%9C%92%E8%A3%A1%E5%BB%BA%E6%BB%BF%E4%BA%86%E6%88%BF%E5%AD%90/">
+      
+        萬億恆大地產的別墅群雜草叢生，地板都發霉了。植物園裡建滿了房子
+      </a>
+      <time>2021-05-19</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=gUKAAvT5m8o" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-19/%E8%80%81%E6%88%BF%E5%AD%90%E6%96%B0%E6%88%BF%E5%AD%90-%E6%88%91%E8%BA%AB%E8%BE%B9%E6%88%BF%E5%B1%8B%E7%9A%84%E5%8F%98%E8%BF%81-%E7%BD%97%E5%AE%BEVLOG/">
+      
+        老房子新房子，我身边房屋的变迁【罗宾VLOG】
+      </a>
+      <time>2021-05-19</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#罗宾" class="tag">
+        罗宾
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=mLi18dxgUJw" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E6%9B%BE%E7%B6%93%E7%9A%84%E9%80%8D%E9%81%99%E5%B3%B6-%E7%B8%BD%E7%B5%B1%E5%85%AC%E5%AF%93%E6%A1%91%E6%8B%BF-%E6%A3%8B%E7%89%8C%E5%B0%84%E6%93%8A%E7%AD%89%E5%A8%9B%E6%A8%82-%E5%A6%82%E4%BB%8A%E8%AE%8A%E6%88%90%E4%BA%86%E4%B8%80%E6%A3%9F%E6%A3%9F%E9%AC%BC%E5%B1%8B/">
+      
+        曾經的逍遙島：總統公寓桑拿、棋牌射擊等娛樂，如今變成了一棟棟鬼屋
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 石炳鋒</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#石炳锋" class="tag">
+        石炳锋
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=YpuQlwabO1U" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E6%9D%B1%E8%8E%9E%E4%B8%89%E6%98%9F%E8%A6%96%E7%95%8C%E6%AD%A3%E5%B8%B8%E9%81%8B%E4%BD%9C-%E6%83%A0%E5%B7%9E%E5%B7%A5%E5%BB%A0%E8%B3%A3%E7%9B%A4%E7%B5%A6TCL-Samsung%E6%92%A4%E9%9B%A2%E5%93%A1%E5%B7%A5%E9%81%A3%E6%95%A3%E8%B2%BB%E8%B6%85%E9%AB%98%E6%84%9F%E5%8B%95%E4%B8%8D%E5%B0%91%E4%BA%BA-%E6%9D%B1%E8%8E%9E%E5%A5%B3%E7%94%9F%E6%AF%94%E4%BE%8B/">
+      
+        東莞三星視界正常運作，惠州工廠賣盤給TCL|Samsung撤離員工遣散費超高感動不少人|東莞女生比例最高的工廠|三星發工資準時，工價高|#東莞工廠#Samsung搬離#TCL#失業#找工作#CC
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#无修饰的中国" class="tag">
+        无修饰的中国
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=cF2TdzHc54U" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E5%8E%9F%E4%BE%86%E4%BD%8F%E8%91%97400%E5%A4%9A%E4%BA%BA%E7%9A%84%E5%B1%B1%E6%9D%91-%E5%A6%82%E4%BB%8A%E5%B0%B1%E5%89%A9%E4%B8%8B%E9%80%99%E5%B9%BE%E4%BD%8D%E7%94%B7%E5%A5%B3%E4%BA%86-%E7%9C%8B%E7%9C%8B%E9%95%B7%E5%BE%97%E5%95%A5%E6%A8%A3/">
+      
+        原來住著400多人的山村，如今就剩下這幾位男女了，看看長得啥樣
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=dXG_gDcnOgg" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E6%9C%80%E6%96%B0-%E4%B8%8A%E6%B5%B7%E4%B8%80%E7%B7%9A%E5%9F%BA%E5%B1%A4%E6%89%93%E5%B7%A5%E4%BA%BA%E7%8F%BE%E6%B3%81-%E5%A4%96%E8%B3%A3%E5%93%A1%E5%B7%A5%E8%B3%87%E6%A0%B8%E7%AE%97%E6%A7%8B%E6%88%90-%E4%B8%80%E5%80%8B%E6%9C%88%E4%B8%8A%E8%B6%B327%E5%A4%A9%E9%A2%A8%E9%9B%A8%E7%84%A1%E9%98%BB-%E7%8F%BE%E5%AF%A6%E7%9A%84%E6%89%93%E5%B7%A5%E4%BA%BA%E6%B2%92%E6%9C%89/">
+      
+        最新：上海一線基層打工人現況，外賣員工資核算構成，一個月上足27天風雨無阻。🌟💪現實的打工人沒有雙休真殘酷！
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#铁锤观世界" class="tag">
+        铁锤观世界
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=ABVYk07trMk" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E6%B2%B3%E5%8D%97%E6%9F%90%E8%BE%B2%E6%9D%91%E9%9A%B1%E8%97%8F%E7%9A%84%E5%9C%9F%E8%B1%AA-%E5%A5%BD%E9%85%92%E5%A5%BD%E8%8F%9C%E6%8B%9B%E5%BE%85%E8%B3%93%E6%9C%8B%E4%B8%94%E4%B8%8D%E6%94%B6%E7%A6%AE%E9%87%91-%E7%9C%8B%E7%9C%8B%E7%82%BA%E4%BA%86%E5%95%A5/">
+      
+        河南某農村隱藏的土豪，好酒好菜招待賓朋且不收禮金，看看為了啥
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 盧保貴視覺影像</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#盧保貴" class="tag">
+        盧保貴
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=Q4YtrilKE7c" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E6%B7%B1%E5%9C%B3%E8%B3%BD%E6%A0%BC%E5%A4%A7%E5%BB%88%E5%8A%87%E7%83%88%E6%99%83%E5%8B%95-%E4%BA%BA%E5%80%91%E9%A9%9A%E6%85%8C%E5%A4%B1%E6%8E%AA%E6%92%A4%E9%9B%A2-%E5%85%B7%E9%AB%94%E5%8E%9F%E5%9B%A0%E5%BE%85%E6%9F%A5-%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF%E4%B8%BB%E9%AB%94%E5%BB%BA%E7%AF%89%E5%AE%89%E5%85%A8/">
+      
+        深圳賽格大廈劇烈晃動，人們驚慌失措撤離，具體原因待查（最新消息主體建築安全）
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#圍城記" class="tag">
+        圍城記
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=5ku92n2s30M" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/society/2021-05-18/%E5%BB%A3%E6%9D%B1%E9%81%AD%E9%81%87%E4%BA%94%E5%8D%81%E5%B9%B4%E4%B8%80%E9%81%87%E6%9A%B4%E9%9B%A8-%E7%B2%B5%E5%8C%97%E5%9C%B0%E5%8D%80%E5%B1%B1%E9%AB%94%E6%BB%91%E5%9D%A1%E5%B0%8E%E8%87%B4%E7%99%BC%E9%9B%BB%E7%AB%99%E8%A2%AB%E8%A1%9D%E6%AF%80-%E5%A4%9A%E5%80%8B%E7%B8%A3%E5%B8%82%E5%81%9C%E6%B0%B4%E5%81%9C%E9%9B%BB-%E9%9F%B6%E9%97%9C%E5%8D%97%E9%9B%84%E9%8E%AE%E5%85%A8%E9%83%A8%E8%A2%AB%E6%B7%B9-%E6%9D%91%E6%B0%91/">
+      
+        廣東遭遇五十年一遇暴雨！粵北地區山體滑坡導致發電站被衝毀，多個縣市停水停電！韶關南雄鎮全部被淹，村民的房屋汽車農田都泡在水中！網友：廣東雨神發錯威了，南粵已地區乾旱多日！然而如此大災卻無一官媒報道！
+      </a>
+      <time>2021-05-18</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 真實中國頻道Real China TV</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/society/categories/#真實中國頻道" class="tag">
+        真實中國頻道
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=cCaxnIX6igA" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+
+</ul>
+
+<div class="pagination">
+  
+    <span class="prev">
+      <a href="/society/page13/" class="prev">
+        上一页
+      </a>
+    </span>
+  
+  
+    <span class="next">
+      <a href="/society/page15/" class="next">
+        下一页
+      </a>
+    </span>
+  
+
+  <link rel="stylesheet" type="text/css" href="/society/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    <a class="fab-action fab-action-1" title="上一页(热键 &#8594;)" href="/society/page13/">
+      <i>上</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一页(热键 &#8592;)" href="/society/page15/">
+      <i>下</i>
+    </a>
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+  <script>
+  /* post pagination keyboard shortcuts */
+  document.body.onkeyup = function(e){
+    if (e.keyCode == '37') { window.location = '/society/page13/'; } // left arrow key
+    if (e.keyCode == '39') { window.location = '/society/page15/'; } // right arrow key
+  };
+  </script>
+
+</div>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/society/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/DB2X16a.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/society" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/society/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
