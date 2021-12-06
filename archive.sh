@@ -19,7 +19,7 @@ do
   f_date=${f:9:10};
   d_date=$(datediff "${f_date}" "${now}");
   # take action on each file. $f store current file name
-  if (( d_date > 120 ));
+  if (( d_date > 480 ));
     then
       # code if found
       mkdir -p "./archived/${f_date}";
@@ -29,7 +29,7 @@ do
 done
 
 git add ./archived/*.md;
-git commit -m"存档${today}之前120天的内容";
+git commit -m"存档${today}之前480天的内容";
 git pull;
 git push;
 
